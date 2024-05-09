@@ -202,99 +202,217 @@
     </div>
     <!-- end of repository information header -->
 
-    <div class="repository-main w-[896px] flex flex-row items-center justify-between mt-4 mx-auto ">
-      <div class="repository-content">
-        <div class="code-manager flex flex-row items-center justify-between space-x-1 text-xs">
-
-          <button
-            class="flex items-center justify-center rounded-md bg-gray-100 hover:bg-gray-150 border border-gray-200 px-1.5 py-1.5 space-x-2 font-semibold">
-            <svg class="w-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
-              data-view-component="true">
-              <path fill-rule="evenodd"
-                d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z">
-              </path>
-            </svg>
-            <span>master</span>
-            <svg class="w-4 fill-current" aria-hidden="true" focusable="false" role="img" viewBox="0 0 16 16"
-              fill="currentColor"
-              style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
-              <path
-                d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
-              </path>
-            </svg>
-          </button>
-          <!-- end of branch selector -->
-
-          <a href="#"
-            class="flex items-center justify-center px-1.5 py-2 space-x-1.5 hover:bg-gray-100  hover:rounded-md font-semibold">
-            <svg class="w-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
-              data-view-component="true">
-              <path fill-rule="evenodd"
-                d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z">
-              </path>
-            </svg>
-            <span>2</span>
-            <span>Branches</span>
-          </a>
-          <!-- end of branch count intro -->
-
-          <a href="#"
-            class="flex items-center justify-center px-1.5 py-2 space-x-1.5 hover:bg-gray-100  hover:rounded-md font-semibold">
-            <svg class="w-4 fill-current" aria-hidden="true" focusable="false" role="img" class="octicon octicon-tag"
-              viewBox="0 0 16 16" fill="currentColor">
-              <path
-                d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z">
-              </path>
-            </svg>
-
-            <span>8</span>
-            <span>Tags</span>
-          </a>
-          <!-- end of tag count intro -->
-
-          <div class="relative">
-            <input type="text"
-              class="rounded-md border border-gray-100 placeholder-gray-500 focus:border-blue-500 w-60 px-8 py-2 shadow-sm shadow-slate-100"
-              placeholder="Go to file" />
-            <div class="absolute top-0 left-0 px-2 text-gray-500 flex items-center h-full">
-              <svg class="h-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
+    <div class="repository-main container flex  mt-4 mx-auto space-x-8">
+      <div class="repository-content w-3/4 flex flex-col space-y-4">
+        <div class="code-nav w-full flex flex-row items-center justify-between space-x-1 text-xs">
+          <div class="left-side flex items-center space-x-3">
+            <button
+              class="flex items-center justify-center rounded-md bg-gray-100 hover:bg-gray-150 border border-gray-200 px-1.5 py-1.5 space-x-2 font-semibold">
+              <svg class="w-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
                 data-view-component="true">
-                <path
-                  d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z">
+                <path fill-rule="evenodd"
+                  d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z">
                 </path>
               </svg>
-            </div>
-          </div>
-          <!-- end of  file search bar -->
+              <span>master</span>
+              <svg class="w-4 fill-current" aria-hidden="true" focusable="false" role="img" viewBox="0 0 16 16"
+                fill="currentColor"
+                style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
+                <path
+                  d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
+                </path>
+              </svg>
+            </button>
+            <!-- end of branch selector -->
 
-          <button
-            class="flex items-center justify-center rounded-md bg-green-600 hover:bg-green-700/90 px-3 py-2.5 space-x-2 font-semibold text-white">
-            <svg class="w-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
-              data-view-component="true"">
+            <a href="#"
+              class="flex items-center justify-center px-1.5 py-2 space-x-1.5 hover:bg-gray-100  hover:rounded-md font-semibold">
+              <svg class="w-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
+                data-view-component="true">
+                <path fill-rule="evenodd"
+                  d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z">
+                </path>
+              </svg>
+              <span>2</span>
+              <span>Branches</span>
+            </a>
+            <!-- end of branch count intro -->
+
+            <a href="#"
+              class="flex items-center justify-center px-1.5 py-2 space-x-1.5 hover:bg-gray-100  hover:rounded-md font-semibold">
+              <svg class="w-4 fill-current" aria-hidden="true" focusable="false" role="img" class="octicon octicon-tag"
+                viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z">
+                </path>
+              </svg>
+
+              <span>8</span>
+              <span>Tags</span>
+            </a>
+            <!-- end of tag count intro -->
+          </div>
+          <!-- end of left side -->
+
+          <div class="right-side flex items-center space-x-3">
+            <div class="relative">
+              <input type="text"
+                class="rounded-md border border-gray-100 placeholder-gray-500 focus:border-blue-500 w-60 px-8 py-2 shadow-sm shadow-slate-100"
+                placeholder="Go to file" />
+              <div class="absolute top-0 left-0 px-2 text-gray-500 flex items-center h-full">
+                <svg class="h-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
+                  data-view-component="true">
+                  <path
+                    d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <!-- end of  file search bar -->
+
+            <button
+              class="flex items-center justify-center rounded-md bg-green-600 hover:bg-green-700/90 px-3 py-2.5 space-x-2 font-semibold text-white">
+              <svg class="w-4 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
+                data-view-component="true"">
               <path
                 d=" m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1
-              .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1
-              1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47
-              8.53a.75.75 0 0 1 0-1.06Z">
-              </path>
-            </svg>
-            <span>Code</span>
-            <svg class="w-4 fill-current" aria-hidden="true" focusable="false" role="img" viewBox="0 0 16 16"
-              fill="currentColor"
-              style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
-              <path
-                d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
-              </path>
-            </svg>
-          </button>
+                .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1
+                1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0
+                1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z">
+                </path>
+              </svg>
+              <span>Code</span>
+              <svg class="w-4 fill-current" aria-hidden="true" focusable="false" role="img" viewBox="0 0 16 16"
+                fill="currentColor"
+                style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
+                <path
+                  d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <!-- end of right side -->
 
         </div>
-      </div>
 
-      <div class="repository-sidebar">
-        sidebar
+        <div class="file-manager flex flex-col border border-gray-300 rounded-lg divide-gray-300 divide-y">
+          <div class="file-header flex items-center justify-between px-4 py-3 bg-gray-50">
+            <div class="left-side flex items-center space-x-2">
+              <a href="#" class="w-4 rounded-full overflow-hidden"><img
+                  src="https://avatars.githubusercontent.com/u/52171700?v=4" alt="avatar"></a>
+              <span class="user-name font-semibold text-xs">Desire</span>
+              <span class="commit-info truncate text-sm text-gray-500">
+                初始化项目文件
+              </span>
+            </div>
+            <div class="right-side flex items-center space-x-1 font-sans text-xs text-gray-500">
+              <a href="#" class="branch-number font-thin hover:text-blue-500 hover:underline">8beca43</a>
+              <a href="#" class="font-thin">·</a>
+              <a href="#" class="commit-time font-thin">9 months ago</a>
+              <a href="#"
+                class="commit-count text-black flex items-center space-x-1 px-2 py-1.5 hover:bg-gray-100 rounded-md">
+                <svg aria-hidden="true" focusable="false" role="img" class="w-4 fill-current" viewBox="0 0 16 16"
+                  fill="currentColor">
+                  <path
+                    d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z">
+                  </path>
+                </svg>
+                <span>8 commits</span>
+              </a>
+            </div>
+          </div>
+          <!-- end of file header -->
+          <div class="file flex items-center justify-between px-4 py-3 hover:bg-gray-50">
+            <div class="w-4/12 flex items-center">
+              <a href="#" class="file-info flex items-center space-x-2 hover:text-blue-500 hover:underline">
+                <svg aria-hidden="true" focusable="false" role="img" class="w-4 fill-blue-400" viewBox="0 0 16 16"
+                  fill="currentColor">
+                  <path
+                    d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z">
+                  </path>
+                </svg>
+                <span class="file-name text-xs">.vscode</span>
+              </a>
+            </div>
+
+            <div class="w-6/12 truncate flex items-center">
+              <a href="#" class="commit-message text-gray-500 text-xs  hover:text-blue-500 hover:underline">Initial
+                commit</a>
+            </div>
+
+            <div class="w-2/12 flex items-center justify-end">
+              <span class="commit-time text-gray-500 text-xs"> 9 months ago</span>
+            </div>
+          </div>
+          <div class="file flex items-center justify-between px-4 py-3 hover:bg-gray-50">
+
+            <div class="w-4/12 flex items-center">
+              <a href="#"
+                class="file-info flex items-center justify-start  space-x-2 hover:text-blue-500 hover:underline">
+                <svg aria-hidden="true" focusable="false" role="img" class="w-4 fill-blue-400" viewBox="0 0 16 16"
+                  fill="currentColor">
+                  <path
+                    d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z">
+                  </path>
+                </svg>
+                <span class="file-name text-xs">.github</span>
+              </a>
+            </div>
+
+            <div class="w-6/12 flex items-center truncate">
+              <a href="#" class="commit-message text-gray-500 text-xs hover:text-blue-500 hover:underline">
+                feat[devtools]: add package for fusebox integration Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Autem eos repellat fugit quod quasi deleniti eligendi ea ipsa enim possimus. (#28553)
+              </a>
+            </div>
+
+            <div class="w-2/12 flex items-center justify-end">
+              <span class="commit-time text-gray-500 text-xs">last week</span>
+            </div>
+
+          </div>
+          <div class="file flex items-center justify-between px-4 py-3 hover:bg-gray-100" >
+
+            <div class="w-4/12 flex items-center">
+
+
+              <a href="#" class="file-info flex items-center space-x-2 hover:text-blue-500 hover:underline">
+                <svg class="w-4 fill-gray-500" aria-hidden="true" focusable="false" role="img" class="color-fg-muted"
+                  viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+                  </path>
+                </svg>
+                </svg>
+                <span class="file-name text-xs">Readme.md</span>
+              </a>
+
+            </div>
+
+            <div class="w-6/12 flex items-center truncate">
+              <a href="#"
+                class="commit-message text-gray-500 text-xs truncate  hover:text-blue-500 hover:underline">Link
+                to reactjs/react.dev repo instead of reactjs/reactjs.org (#28493)
+              </a>
+            </div>
+            <div class="w-2/12 flex items-center justify-end">
+              <span class="commit-time text-gray-500 text-xs">last week</span>
+            </div>
+
+          </div>
+        </div>
+
+
       </div>
+      <!-- end of repository content -->
+
+      <div class="repository-sidebar w-1/4 flex flex-col space-y-4">
+        <h4 class="font-semibold mb-2">About</h4>
+        <p class="box-content "> 练习tailwindcss</p>
+      </div>
+      <!-- end of repository sidebar -->
     </div>
+    <!-- end of repository main -->
   </main>
   <!-- end of main -->
 
